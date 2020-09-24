@@ -30,12 +30,9 @@ export default function Jobs({jobs}) {
 
   // pagination
   const numJobs = jobs.length;
-  const numPages = Math.ceil(numJobs / 50);
+  const numPages = Math.ceil(numJobs / 10);
   const [activeStep, setActiveStep] = React.useState(0);
-  const jobsOnPage = jobs.slice(activeStep * 50, (activeStep * 50) + 50);
-
-  // step == 0, show 0-49
-  // step == 1, show 50 - 99
+  const jobsOnPage = jobs.slice(activeStep * 10, (activeStep * 10) + 10);
 
   function scrollToTop () {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -58,8 +55,8 @@ export default function Jobs({jobs}) {
   return (
     <div className="jobs">
       <JobModal open={open} job={selectedJob} handleClose={handleClose} />
-      <Typography variant="h4" component="h1">
-          Entry Level  Software Jobs
+      <Typography variant="h4" component="h1" className="app-title">
+          Senior Level Software Jobs
       </Typography>
       <Typography variant="h6" component="h2">
           Found {numJobs} Jobs
@@ -67,9 +64,8 @@ export default function Jobs({jobs}) {
       {
         jobsOnPage.map(
           (job, i) => <Job key={i} job={job} onClick={() => {
-              console.log('clicked')
-              handleClickOpen();
-              selectJob(job)
+            handleClickOpen();
+            selectJob(job)
           }} />
         )
       }

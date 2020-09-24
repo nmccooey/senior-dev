@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -38,7 +37,6 @@ export default function JobModal({job,  open, handleClose}) {
           <DialogContentText 
               id="alert-dialog-slide-description"
           >
-            <Chip size="small" label={`from ${job.source}`} />
           </DialogContentText>
           <DialogContentText 
               id="alert-dialog-slide-description"

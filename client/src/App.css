@@ -1,20 +1,66 @@
-.jobs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.job {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  border: solid black 2px;
-  margin: 10px 0;
-  padding: 10px 10px 10px 10px;
+body {
+  margin: 20px 40px;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+  color: greenyellow;
 }
 
 .app-title {
-  border: solid black 2px;
-  text-align: center;
+  text-shadow: 0 0 5px yellowgreen;
+  color: greenyellow;
+  text-transform: uppercase;
+}
+
+.job {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+.job:hover {
+  cursor: pointer;
+  color: greenyellow;
+  background-color: #9d9d9e;
+}
+
+.detail-logo {
+  height: 30px;
+  float: right;
+}
+
+.job-company {
+  padding: 0 30px;
+}
+
+.job-dialog {
+  padding: 30px 50px;
+}
+
+.welcome-description {
+  width: 80%;
+  margin: 20px 0;
+  padding: 20px 10px;
+}
+
+.welcome-item {
+  opacity: 0;
+  transition: .5s ease all;
+}
+
+.flex-align-mid {
+  display: flex;
+  align-items: center;
+}
+
+.job-title-location {
+  margin-left: 20px;
 }
