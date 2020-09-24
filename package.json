@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/icons": "^4.9.1",
+    "cors": "^2.8.5",
     "cron": "^1.8.2",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
