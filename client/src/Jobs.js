@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
+let title = "{ Senior Dev }";
+
 export default function Jobs({jobs}) {
 
   React.useEffect(() => {
@@ -56,9 +58,12 @@ export default function Jobs({jobs}) {
     <div className="jobs">
       <JobModal open={open} job={selectedJob} handleClose={handleClose} />
       <Typography variant="h4" component="h1" className="app-title">
-          Senior Level Software Jobs
+          {title}
       </Typography>
-      <Typography variant="h6" component="h2">
+      <Typography variant="h6" component="h2" className="app-slogan">
+          Bringing You Senior Level Software Jobs.
+      </Typography>
+      <Typography variant="h6" component="h3">
           Found {numJobs} Jobs
       </Typography>
       {

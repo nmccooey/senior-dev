@@ -16,6 +16,10 @@ body {
   text-transform: uppercase;
 }
 
+.app-slogan {
+  margin-bottom: 20px !important; 
+}
+
 .job {
   width: 80%;
   margin: 0 auto;
